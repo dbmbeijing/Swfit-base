@@ -4,9 +4,10 @@
 
 有三个vc页面，通过滑动屏幕则可以进行页面切换。切换时还有番薯效果。滚动方式
 
-echo "# -" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/dbmbeijing/-.git
-git push -u origin master
+
+
+UIPageViewContrller 使用注意点
+
+1.首先遵守他的数据源代理  就是总的自控控制器的个数 设置为当前控制器
+2.实现两个代理方法 获取前一页 和后一页 的方法  里面获取时要小心数组越界做判断 
+3.还要在设置当前页的显示的控制器 一开始加载显示第几页
